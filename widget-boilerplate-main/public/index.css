@@ -1,0 +1,34 @@
+/*CSS stylesheet for homepage of project 
+resources:
+
+centering images:
+https://blog.hubspot.com/website/center-an-image-in-html
+*/
+
+
+h3{
+  text-align:center;
+  color:GREEN;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+#hello{
+  text-align:center;
+  color:red;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-weight: bold;
+  font-size: 48px;
+
+}
+
+#mainpicture {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%; 
+  margin-bottom: auto; 
+  width: 10%;
+  height: 10%;
+  display: block;
+}
