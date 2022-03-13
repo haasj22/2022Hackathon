@@ -11,3 +11,121 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  color: darkred;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  color: darkblue;
+  margin: 5px;
+}
+
+h1 {
+  background: #2980b9;
+  color: white;
+  margin: 0;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+iframe {
+  float: left;
+}
+
+ol {
+  /* THE BULLET POINTS
+	list-style: none;
+	*/
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  background-color: rgb(13, 168, 108);
+}
+
+li {
+  background: #fff;
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+}
+
+li:nth-child(2n) {
+  background: #d3d3d3;
+}
+
+span {
+  height: 30px;
+  width: 0px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+  background: #e74c3c
+}
+
+li:hover span {
+  width: 30px;
+  opacity: 1.0;
+}
+
+input {
+  font-size: 18px;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+  color: #2980b9;
+  background-color: #e4e4e4;
+}
+
+input:focus {
+  background: white;
+  border: 3px solid green;
+  /*OUTLINE OF INPUT BOX
+	outlin: none; */
+}
+
+.fa-plus {
+  float: right;
+}
+
+#container {
+  width: 360px;
+  margin: 60px auto;
+  background: #d3d3d3;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display:block;
+  vertical-align:middle;
+  background-color:lightgreen;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
+}
+
+#task-list button {
+  display: none;
+}
+

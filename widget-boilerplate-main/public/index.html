@@ -12,6 +12,13 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- Load the jQuery library -->
+    <script
+    src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!-- Reference to JavaScript code in separate file -->
+    <script src="./todo.js"></script>
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" /> -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -32,16 +39,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Professor Pals</title>
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   
     
-    <div id="root">
-      
-    </div>
   
     <!--
       This HTML file is a template.
@@ -53,11 +57,106 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- <iframe src="https://free.timeanddate.com/clock/i5zr5d5i/n1991/szw110/szh110/hoc09f/hbw0/hfc09f/cf100/hnce1ead6/fas30/fdi66/mqc000/mql15/mqw4/mqd98/mhc000/mhl15/mhw4/mhd98/mmc000/mml10/mmw1/mmd98/hhc00f/hhs2/hmcf00/hms2/hsv0" frameborder="0" width="110"
+    height="110"></iframe> -->
+    
+    
+
+    <div id="container">
+      <div id="countdown">5:00</div>
+
+      <h1>To-do List <i class="fa fa-plus"></i></h1>
+      <form id="task-list">
+        <input type="text" placeholder="Add a To-Do" id="task">
+        <button type="submit"></button>
+      </form>
+      <ol id="sortable">
+        <li id="task-EXAMPLE"><span><i class="fa fa-trash"></i></span>
+          <label>EXAMPLE</label>
+        </li>
+      </ol>
+    </div>
+    
+    
+    <!-- <iframe src="https://free.timeanddate.com/clock/i5zr5d5i/n1991/szw110/szh110/hoc09f/hbw0/hfc09f/cf100/hnce1ead6/fas30/fdi66/mqc000/mql15/mqw4/mqd98/mhc000/mhl15/mhw4/mhd98/mmc000/mml10/mmw1/mmd98/hhc00f/hhs2/hmcf00/hms2/hsv0" frameborder="0" width="110"
+    height="110"></iframe>
+    <div id="container">
+      <h1>To-do List <i class="fa fa-plus"></i></h1>
+      <form id="task-list">
+        <input type="text" placeholder="Add a To-Do" id="task">
+        <button type="submit"></button>
+      </form>
+      <ol id="sortable">
+        <li id="task-EXAMPLE"><span><i class="fa fa-trash"></i></span>
+          <label>EXAMPLE</label>
+        </li>
+      </ol>
+    </div> -->
+
+    <!-- testing getting by class -->
+    <!-- <iframe src="https://free.timeanddate.com/clock/i5zr5d5i/n1991/szw110/szh110/hoc09f/hbw0/hfc09f/cf100/hnce1ead6/fas30/fdi66/mqc000/mql15/mqw4/mqd98/mhc000/mhl15/mhw4/mhd98/mmc000/mml10/mmw1/mmd98/hhc00f/hhs2/hmcf00/hms2/hsv0" frameborder="0" width="110"
+    height="110"></iframe>
+    <div id="container">
+      <h1>To-do List <i class="fa fa-plus"></i></h1>
+      <form id="task-list">
+        <input type="text" placeholder="Add a To-Do" id="task">
+        <button type="submit"></button>
+      </form>
+      <ol class="sortable">
+        <li id="task-EXAMPLE"><span><i class="fa fa-trash"></i></span>
+          <label>EXAMPLE</label>
+        </li>
+      </ol>
+    </div>
+    
+    <iframe src="https://free.timeanddate.com/clock/i5zr5d5i/n1991/szw110/szh110/hoc09f/hbw0/hfc09f/cf100/hnce1ead6/fas30/fdi66/mqc000/mql15/mqw4/mqd98/mhc000/mhl15/mhw4/mhd98/mmc000/mml10/mmw1/mmd98/hhc00f/hhs2/hmcf00/hms2/hsv0" frameborder="0" width="110"
+    height="110"></iframe>
+    <div id="container">
+      <h1>To-do List <i class="fa fa-plus"></i></h1>
+      <form id="task-list">
+        <input type="text" placeholder="Add a To-Do" id="task">
+        <button type="submit"></button>
+      </form>
+      <ol class="sortable">
+        <li id="task-EXAMPLE"><span><i class="fa fa-trash"></i></span>
+          <label>EXAMPLE</label>
+        </li>
+      </ol>
+    </div>
+    
+    <div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans mt-20">
+      <div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+      <div class="mb-4">
+      <h1 class="text-3xl md:text-4xl text-indigo-600 font-medium mb-2">
+      To-Do List App
+      </h1>
+      <div class="flex mt-4">
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" name="text" id="text" placeholder="Add Todo" />
+      <input type="hidden" id="saveIndex" />
+      <button class="p-2 lg:px-4 md:mx-2 text-center border border-solid border-indigo-600 rounded text-white bg-indigo-600 transition-colors duration-300 mt-1 md:mt-0 md:ml-1" id="add-task-btn">Add</button>
+      <button class="p-2 lg:px-4 md:mx-2 text-center border border-solid border-indigo-600 rounded bg-indigo-600 text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1" style="display: none" id="save-todo-btn">Edit Todo</button>
+      </div>
+      </div>
+      <div id="listBox"></div>
+      </div>
+      </div> -->
    
-    <h1 id="hello">Hewwoooo</h1>
-    <img id="mainpicture" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Portland_farmers_market_southwest_looking_north_P2560.jpeg " alt="picture of crowd at farmers market">
-    <h1 id="heading">Kill Professor Vegdahl</h1>
-  
+    <h1 id="hello">My Professors</h1>
+    
+    <div class = "row">
+      <div class = "column">
+        <img id = "Cenek" src = "https://dirphotos.up.edu/cenek.jpg">
+      </div>
+      <div class = "column">
+        <img id = "Oberoi" src = "https://dirphotos.up.edu/oberoi.jpg">
+      </div>
+      <div class="column">
+        <img id="Vegdahl" src="https://dirphotos.up.edu/vegdahl.jpg" alt="picture of crowd at farmers market">
+      </div>
+  </div>
+    <h1 id="footer">Alex Junkins, Justin Cao, John Haas, and Natalie Tashchuk</h1>
+
    
   </body>
 </html>
